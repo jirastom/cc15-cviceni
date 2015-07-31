@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Přihlášení
+{% endblock %}
+
+{% block body %}
+    <h1>Přihlášení</h1>
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+    <form action="{{ path("login_check") }}" method="post" id="login">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id=" username" name="_username" value="{{ last_username }}" />
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="_password" />
+        </div>
+        <input type="submit" value="Přihlásit" />
+    </form>
+{% endblock %}

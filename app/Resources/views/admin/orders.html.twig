@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Objednávky
+{% endblock %}
+
+{% block body %}
+    <h1>Objednávky</h1>
+    <a href="{{ path('admin_invoices') }}">Faktury</a>
+    {#{{ render(url('terms_and_conditions')) }}#}
+{% endblock %}

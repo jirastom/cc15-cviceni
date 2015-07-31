@@ -1,0 +1,12 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+terms_and_conditions:
+    path: /privacy
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/terms.html.twig
+
+logout:
+    path: /logout
